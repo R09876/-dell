@@ -1,0 +1,41 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+
+// Global
+// ---------------------------------
+
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/global";
+@import "global/container";
+
+
+// Components
+// ---------------------------------
+
+@import "components/btn";
+@import "components/title";
+@import "components/scroll-to";
+@import "components/product";
+@import "components/benefit-card";
+@import "components/new";
+
+
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/slider";
+@import "blocks/catalog";
+@import "blocks/benefits";
+@import "blocks/news";
+@import "blocks/contact-us";
+@import "blocks/contacts";
+@import "blocks/form";
+@import "blocks/footer";

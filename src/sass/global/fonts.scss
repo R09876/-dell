@@ -1,0 +1,54 @@
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: local("Roboto")
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: local("Roboto")
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: local("Roboto"),
+    url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 100;
+  font-style: normal;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src: local("Roboto")
+    url("../fonts/Roboto-Thin.woff2") format("woff2"),
+    url("../fonts/Roboto-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Euclid Circular A";
+
+  font-display: swap;
+  src: local("Euclid Circular A")
+    url("../fonts/Euclid-Circular-A-Bold.woff2") format("woff2"),
+    url("../fonts/Euclid-Circular-A-Bold.woff") format("woff");
+}

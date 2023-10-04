@@ -1,0 +1,44 @@
+.benefit-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 35px;
+  background-color: $color-bunker;
+  border-radius: 10px;
+  color: $color-pink-swan;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 139px;
+    height: 90px;
+    background-image: url(../img/decor.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: $color-baltic-sea;
+
+    svg {
+      display: block;
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    color: $color-default-white;
+  }
+}

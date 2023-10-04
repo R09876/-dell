@@ -1,0 +1,49 @@
+.contacts {
+  padding: 7.15%;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $color-snow;
+
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 89px;
+    margin-bottom: 50px;
+    padding-left: 56px;
+    font-size: 16px;
+    line-height: 1.34;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 38px;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--location {
+      &::before {
+        background: url(../img/location.svg);
+      }
+    }
+
+    &--email {
+      &::before {
+        background: url(../img/sms.svg);
+      }
+    }
+
+    &--phone {
+      &::before {
+        background: url(../img/call-calling.svg);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.news {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 415px);
+    grid-row-gap: 40px;
+    grid-column-gap: 65px;
+    justify-content: center;
+    width: 100%;
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

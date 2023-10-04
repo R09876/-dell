@@ -1,0 +1,15 @@
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 47px;
+  }
+
+
+  &__link {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-bunker;
+  }
+}

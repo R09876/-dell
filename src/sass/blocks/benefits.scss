@@ -1,0 +1,10 @@
+.benefits {
+  width: 100%;
+  background-color: $color-white-smoke;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    gap: 26px;
+  }
+}

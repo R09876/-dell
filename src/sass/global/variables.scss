@@ -1,0 +1,42 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-grey:                         #838383;
+$color-bunker:                       #292d32;
+$color-blue:                         #33a9ff;
+$color-white-smoke:                  #f2f2f2;
+$color-snow:                         #f9f9f9;
+$color-whisper:                      #eeeeee;
+$color-whisper-2:                    #e5e5e5;
+$color-light-grey:                   #d0d0d0;
+$color-pink-swan:                    #b7b7b7;
+$color-baltic-sea:                   #343a41;
+
+
+// Typography
+// ---------------------------------
+
+$ff-roboto:                     "Roboto", "Arial", sans-serif;
+$ff-euclid:                     "Euclid Circular A", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+
+// Viewports
+// ---------------------------------
+
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1920:                           1920px;

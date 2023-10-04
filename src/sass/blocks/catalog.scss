@@ -1,0 +1,35 @@
+.catalog {
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 440px);
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    counter-reset: num;
+  }
+
+  .product {
+    position: relative;
+    counter-increment: num;
+    background: $color-snow;
+
+    &::before {
+      content: counter(num);
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      font-size: 25px;
+      font-weight: 100;
+    }
+
+    &:nth-child(2n) {
+      background: $color-white-smoke;
+    }
+
+    &:nth-child(-n+9):before {
+      content: "0" counter(num);
+    }
+  }
+}
