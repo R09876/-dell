@@ -1,5 +1,25 @@
 .catalog {
   width: 100%;
+  padding: 164px 0 180px;
+
+  
+  @include vp-767 {
+    padding: 120px 0;
+  }
+
+  &__text {
+    .title {
+      display: block;
+      width: 85%;
+      margin-bottom: 30px;
+      line-height: 1;
+    }
+
+    p {
+      width: 85%;
+      margin-bottom: 46px;
+    }
+  }
 
   .container {
     display: grid;
@@ -8,6 +28,11 @@
     justify-content: center;
     width: 100%;
     counter-reset: num;
+
+    @include vp-767 {
+      grid-template-columns: repeat(auto-fill, minmax(100% ,440px));
+      gap: 15px;
+    }
   }
 
   .product {

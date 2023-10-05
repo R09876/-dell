@@ -1,41 +1,49 @@
 .contact-us {
   position: relative;
   padding-bottom: 180px;
-
-  /*&::before {
-    content: "";
-    position: absolute;
-    width: 36px;
-    height: 38px;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }*/
+  background: linear-gradient(180deg, $color-default-white 33%, $color-whisper 33%);
 
   .container {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-wrap: nowrap;
+
+    @include vp-767 {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   .form,
   .contacts {
     width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   .form {
     border-radius: 0px 20px 20px 0px;
+
+    @include vp-767 {
+      border-radius: none;
+    }
   }
 
   .contacts {
     border-radius: 20px 0px 0px 20px;
+
+    @include vp-767 {
+      border-radius: none;
+    }
   }
 
   &__img {
     position: absolute;
-    top: 10.1%;
-    left: 40%;
+    top: 17%;
+    left: 36.2%;
     width: 291px;
     height: 591px;
 
@@ -47,6 +55,19 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &.bg-text {
+    &::after {
+      left: 10px;
+      bottom: 50px;
+      width: 84vw;
+      height: 22vw;
+      background: url("../img/our-contacts.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center left;
     }
   }
 }
