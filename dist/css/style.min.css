@@ -1541,7 +1541,7 @@ input:matches([type=email],
   position: relative;
   z-index: 3;
   min-height: 146px;
-  width: 100%;
+  width: calc(100% + 2px);
   padding: 60px 0 26px;
   background: url(../img/mask.svg);
   background-repeat: no-repeat;
@@ -1590,6 +1590,7 @@ input:matches([type=email],
 
 .bg-text {
   position: relative;
+  overflow: hidden;
 }
 
 .bg-text::after {
@@ -1635,6 +1636,7 @@ input:matches([type=email],
   width: 20px;
   height: 20px;
   margin-right: auto;
+  margin-left: 18px;
 }
 
 .header__search svg {
@@ -1870,6 +1872,7 @@ input:matches([type=email],
   z-index: 100;
   bottom: 163px;
   right: 18.7%;
+  cursor: pointer;
 }
 
 .intro .swiper-next svg {
@@ -1883,6 +1886,10 @@ input:matches([type=email],
   width: max-content;
   bottom: 165px;
   left: 67.62%;
+}
+
+.intro .swiper-pagination-bullet {
+  cursor: pointer;
 }
 
 .intro .swiper-pagination-bullet-active {
@@ -2162,7 +2169,7 @@ input:matches([type=email],
 .contact-us {
   position: relative;
   padding-bottom: 180px;
-  background: linear-gradient(180deg, #ffffff 33%, #eeeeee 33%);
+  background: linear-gradient(180deg, #ffffff 34%, #eeeeee 34%);
 }
 
 .contact-us .container {
@@ -2446,10 +2453,10 @@ input:matches([type=email],
 }
 
 .footer.bg-text::after {
-  right: 10px;
-  top: 133px;
-  width: 26.82vw;
-  height: 9vw;
+  right: -10px;
+  top: 128px;
+  width: 25vw;
+  height: 9.2vw;
   background: url("../img/dell-footer.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2476,6 +2483,10 @@ input:matches([type=email],
   }
 
   .benefits__cards {
+    justify-content: center;
+  }
+
+  .news__cards {
     justify-content: center;
   }
 
@@ -2538,6 +2549,11 @@ input:matches([type=email],
 
   .header {
     padding: 15px 0;
+  }
+
+  .header .container {
+    flex-wrap: nowrap;
+    gap: 15px;
   }
 
   .header__logo {

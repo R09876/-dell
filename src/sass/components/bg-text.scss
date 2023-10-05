@@ -1,5 +1,6 @@
 .bg-text {
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";

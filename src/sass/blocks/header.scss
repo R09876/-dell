@@ -12,6 +12,11 @@
     gap: 30px;
     flex-wrap: wrap;
     align-items: center;
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+      gap: 15px;
+    }
   }
 
   &__logo {
@@ -48,6 +53,7 @@
     width: 20px;
     height: 20px;
     margin-right: auto;
+    margin-left: 18px;
 
     svg {
       display: block;

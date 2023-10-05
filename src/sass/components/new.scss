@@ -60,7 +60,7 @@
     position: relative;
     z-index: 3;
     min-height: 146px;
-    width: 100%;
+    width: calc(100% + 2px);
     padding: 60px 0 26px;
     background: url(../img/mask.svg);
     background-repeat: no-repeat;

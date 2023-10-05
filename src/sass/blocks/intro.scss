@@ -26,6 +26,7 @@
     z-index: 100;
     bottom: 163px;
     right: 18.7%;
+    cursor: pointer;
 
     svg {
       display: block;
@@ -38,6 +39,10 @@
     width: max-content;
     bottom: 165px;
     left: 67.62%;
+  }
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
   }
 
   .swiper-pagination-bullet-active {
