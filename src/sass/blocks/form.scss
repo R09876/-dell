@@ -1,10 +1,16 @@
 .form {
-  padding: 7.15% 9.22%;
+  padding: 7.14% 9.6% 7.14% 9.2%;
   color: $color-default-white;
   background: $color-bunker;
+  font-size: 16px;
+
+  @include vp-767 {
+    padding: 60px 15px;
+  }
 
   .title {
     color: $color-default-white;
+    margin-bottom: 11px;
   }
 
   p {
@@ -20,6 +26,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 52px;
+
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
   }
 
   form {
@@ -31,7 +41,7 @@
       position: absolute;
       z-index: 3;
       top: -10px;
-      left: 23px;
+      left: 21px;
       width: max-content;
       padding: 0 5px;
       color: $color-white-smoke;

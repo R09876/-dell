@@ -20,6 +20,11 @@ html {
   font-family: $ff-roboto;
   color: $color-grey;
   scroll-behavior: smooth;
+  user-select: none;
+
+  @include vp-767 {
+    font-size: 15px;
+  }
 }
 
 body {
@@ -60,6 +65,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.scroll-lock {
+  overflow: hidden;
 }
 
 button,

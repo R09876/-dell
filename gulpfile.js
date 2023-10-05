@@ -44,7 +44,7 @@ function concatAndMinifyJS() {
 // Копирование
 function copy() {
   return gulp
-    .src(['src/fonts/*','src/*.html', 'src/js/vendor/*.js','src/img/**/*', '!src/img/sprite'], {
+    .src(['src/fonts/*','src/*.html', 'src/js/vendor/*.js','src/img/**/*', '!src/img/sprite/'], {
       base: 'src',
     })
     .pipe(gulp.dest('dist'))

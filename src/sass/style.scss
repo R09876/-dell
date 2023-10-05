@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -22,6 +23,7 @@
 @import "components/product";
 @import "components/benefit-card";
 @import "components/new";
+@import "components/bg-text";
 
 
 
@@ -30,8 +32,12 @@
 
 @import "blocks/header";
 @import "blocks/nav";
+@import "blocks/burger";
+@import "blocks/menu";
+@import "blocks/dropdown";
 @import "blocks/intro";
-@import "blocks/slider";
+@import "blocks/slide-left";
+@import "blocks/slide-right";
 @import "blocks/catalog";
 @import "blocks/benefits";
 @import "blocks/news";

@@ -1,14 +1,43 @@
 .news {
+  padding: 172px 0 175px;
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 68px;
+
+    .btn {
+      height: max-content;
+      margin-top: 7px;
+      gap: 16px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+
+      .btn {
+        width: max-content;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 725px;
+
+    .title {
+      margin-bottom: 25px;
+    }
+  }
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 415px);
     grid-row-gap: 40px;
     grid-column-gap: 65px;
-    justify-content: center;
     width: 100%;
 
     @include vp-767 {
-      grid-template-columns: 1fr;
+      grid-template-columns: calc(100% - 11px);
     }
   }
 }

@@ -1,0 +1,52 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  overflow:hidden;
+
+  @include vp-767 {
+    display: flex;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 9px);
+    top: 50%;
+
+    display: block;
+    width: 18px;
+
+    border-top: 1.5px solid $color-bunker;
+    border-radius: 2.5px;
+    transform: rotate(45deg) translate(-200%);
+    transition: $trans-default;
+    transition-delay: 0s;
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(200%);
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    width: 18px;
+
+    border-top: 1.5px solid $color-bunker;
+
+    transition: transform 0.3s $trans-default;
+    transition-delay: 0.3s;
+
+    &:nth-of-type(2) {
+      transform-origin: left center;
+      transition-delay: 0.1s;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

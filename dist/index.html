@@ -28,8 +28,8 @@
           <img src="img/logo.png" width="70" height="70" srcset="img/logo@2x.png 2x" alt="голубая надпись dell в белом кругу с голубой границей">
         </picture>
       </a>
-      <nav class="header__nav nav">
-        <ul class="nav__list menu">
+      <nav class="header__nav menu">
+        <ul class="nav__list menu__list">
           <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
@@ -42,81 +42,242 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
       </a>
-      <div class="header__icons">
-        <a class="header__icon" href="#" aria-label="Нажмите для перехода в профиль">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite.svg#profile"></use>
-          </svg>
-        </a>
-        <a class="header__icon" href="#" aria-label="Нажмите для перехода">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite.svg#signal"></use>
-          </svg>
-        </a>
-        <a class="header__icon" href="#" aria-label="Нажмите для перехода в избранное">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite.svg#heart"></use>
-          </svg>
-        </a>
-        <a class="header__icon header__icon--basket" href="#" aria-label="Нажмите для перехода d rjhpbye">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite.svg#shop"></use>
-          </svg>
-          <span class="header__num"><span>3</span></span>
-        </a>
+      <div class="header__btns">
+        <span class="header__name">Мария</span>
+        <div class="header__icons">
+          <div class="dropdown">
+            <button class="header__icon" href="#" aria-label="Нажмите для перехода в профиль">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#profile"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <div class="dropdown__wrapper">
+                <div class="dropdown__person">
+                  <span class="header__icon" href="#" aria-label="Нажмите для перехода в профиль">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#profile"></use>
+                    </svg>
+                  </span>
+                  <span class="dropdown__name">Мария</span>
+                </div>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Личный кабинет</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">История заказов</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Персональные предложения</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Выйти</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a class="header__icon header__icon--no-mob" href="#" aria-label="Нажмите для перехода">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#signal"></use>
+            </svg>
+          </a>
+          <a class="header__icon header__icon--no-mob" href="#" aria-label="Нажмите для перехода в избранное">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+          </a>
+          <a class="header__icon header__icon--basket" href="#" aria-label="Нажмите для перехода в корзину">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#shop"></use>
+            </svg>
+            <span class="header__num"><span>3</span></span>
+          </a>
+          <button class="header__icon burger" href="#" aria-label="Нажмите для открытия меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
   <main class="main">
     <section class="intro">
-      <div class="container">
-        <div class="swiper intro__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide slide">
-              <a class="scroll-to" href="#catalog">
-                <span class="scroll-to__text">Scroll to catalog</span>
-                <svg width="25" height="38">
-                  <use xlink:href="img/sprite.svg#mouse"></use>
-                </svg>
-              </a>
-              <div class="slide__text">
-                <span>Новое поступление</span>
-                <span class="title">Лучшие товары от&nbsp;компании Del</span>
-                <button class="btn">
-                  <span class="btn__img">
-                    <svg width="12" height="12">
-                      <use xlink:href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Подробнее</span>
-                </button>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="intro__container">
+              <div class="slide-left bg-text">
+                <a class="scroll-to" href="#catalog">
+                  <span class="scroll-to__text">Scroll to catalog</span>
+                  <svg width="25" height="38">
+                    <use xlink:href="img/sprite.svg#mouse"></use>
+                  </svg>
+                </a>
+                <div class="slide-left__text">
+                  <span>Новое поступление</span>
+                  <span class="title">Лучшие товары от&nbsp;компании DelL</span>
+                  <button class="btn">
+                    <span class="btn__img">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/sprite.svg#arrow"></use>
+                      </svg>
+                    </span>
+                    <span class="btn__text">Подробнее</span>
+                  </button>
+                </div>
+                <div class="slide-left__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
+          
+                    <img src="img/intro.png" width="557" height="555" srcset="img/intro@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
               </div>
-              <div class="slide__img">
-                <picture>
-                  <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
-        
-                  <img src="img/intro.png" width="557" height="555" srcset="img/intro@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
-                </picture>
+              <div class="slide-right">
+                <div class="slide-right__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/slider.webp 1x, img/slider@2x.webp 2x">
+          
+                    <img src="img/slider.png" width="716" height="725" srcset="img/slider@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+                <span class="title title--m">Выгодное предложение от&nbsp;Dell</span>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-        
-          <div class="swiper-button-next">
-            <svg width="49" height="49">
-              <use xlink:href="img/sprite.svg#pshop"></use>
-            </svg>
+          <div class="swiper-slide">
+            <div class="intro__container">
+              <div class="slide-left bg-text">
+                <a class="scroll-to" href="#catalog">
+                  <span class="scroll-to__text">Scroll to catalog</span>
+                  <svg width="25" height="38">
+                    <use xlink:href="img/sprite.svg#mouse"></use>
+                  </svg>
+                </a>
+                <div class="slide-left__text">
+                  <span>Новое поступление</span>
+                  <span class="title">Лучшие товары от&nbsp;компании DelL</span>
+                  <button class="btn">
+                    <span class="btn__img">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/sprite.svg#arrow"></use>
+                      </svg>
+                    </span>
+                    <span class="btn__text">Подробнее</span>
+                  </button>
+                </div>
+                <div class="slide-left__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
+          
+                    <img src="img/intro.png" width="557" height="555" srcset="img/intro@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+              </div>
+              <div class="slide-right">
+                <div class="slide-right__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/slider.webp 1x, img/slider@2x.webp 2x">
+          
+                    <img src="img/slider.png" width="716" height="725" srcset="img/slider@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+                <span class="title title--m">Выгодное предложение от&nbsp;Dell</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="intro__container">
+              <div class="slide-left bg-text">
+                <a class="scroll-to" href="#catalog">
+                  <span class="scroll-to__text">Scroll to catalog</span>
+                  <svg width="25" height="38">
+                    <use xlink:href="img/sprite.svg#mouse"></use>
+                  </svg>
+                </a>
+                <div class="slide-left__text">
+                  <span>Новое поступление</span>
+                  <span class="title">Лучшие товары от&nbsp;компании DelL</span>
+                  <button class="btn">
+                    <span class="btn__img">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/sprite.svg#arrow"></use>
+                      </svg>
+                    </span>
+                    <span class="btn__text">Подробнее</span>
+                  </button>
+                </div>
+                <div class="slide-left__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
+          
+                    <img src="img/intro.png" width="557" height="555" srcset="img/intro@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+              </div>
+              <div class="slide-right">
+                <div class="slide-right__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/slider.webp 1x, img/slider@2x.webp 2x">
+          
+                    <img src="img/slider.png" width="716" height="725" srcset="img/slider@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+                <span class="title title--m">Выгодное предложение от&nbsp;Dell</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="intro__container">
+              <div class="slide-left bg-text">
+                <a class="scroll-to" href="#catalog">
+                  <span class="scroll-to__text">Scroll to catalog</span>
+                  <svg width="25" height="38">
+                    <use xlink:href="img/sprite.svg#mouse"></use>
+                  </svg>
+                </a>
+                <div class="slide-left__text">
+                  <span>Новое поступление</span>
+                  <span class="title">Лучшие товары от&nbsp;компании DelL</span>
+                  <button class="btn">
+                    <span class="btn__img">
+                      <svg width="12" height="12">
+                        <use xlink:href="img/sprite.svg#arrow"></use>
+                      </svg>
+                    </span>
+                    <span class="btn__text">Подробнее</span>
+                  </button>
+                </div>
+                <div class="slide-left__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
+          
+                    <img src="img/intro.png" width="557" height="555" srcset="img/intro@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+              </div>
+              <div class="slide-right">
+                <div class="slide-right__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/slider.webp 1x, img/slider@2x.webp 2x">
+          
+                    <img src="img/slider.png" width="716" height="725" srcset="img/slider@2x.png 2x" alt="Два серых ноутбука: работающий и закрытый">
+                  </picture>
+                </div>
+                <span class="title title--m">Выгодное предложение от&nbsp;Dell</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="intro__left">
-          <span class="title title--m">Выгодное предложение от Dell</span>
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-next">
+          <svg width="104" height="21">
+            <use xlink:href="img/sprite.svg#big-arrow"></use>
+          </svg>
         </div>
       </div>
     </section>
     <section class="catalog" id="catalog">
       <div class="container">
         <div class="catalog__text">
-          <span class="title">Каталог товаров от Dell</span>
+          <span class="title">Каталог товаров от&nbsp;Dell</span>
           <p>Наша компания является зарегистрированным и&nbsp;официальным партнером Dell в&nbsp;России.</p>
           <button class="btn">
             <span class="btn__img">
@@ -132,7 +293,7 @@
             <picture>
               <source type="image/webp" srcset="img/card-1.webp 1x, img/card-1@2x.webp 2x">
     
-              <img src="img/card-1.png" width="440" height="266" srcset="img/card-1@2x.png 2x" alt="Открытый ноутбук">
+              <img src="img/card-1.png" width="440" height="270" srcset="img/card-1@2x.png 2x" alt="Открытый ноутбук">
             </picture>
           </div>
           <div class="product__text">
@@ -145,7 +306,7 @@
             <picture>
               <source type="image/webp" srcset="img/card-2.webp 1x, img/card-2@2x.webp 2x">
     
-              <img src="img/card-2.png" width="440" height="266" srcset="img/card-2@2x.png 2x" alt="Монитор, мышка и клавиатура">
+              <img src="img/card-2.png" width="440" height="270" srcset="img/card-2@2x.png 2x" alt="Монитор, мышка и клавиатура">
             </picture>
           </div>
           <div class="product__text">
@@ -158,7 +319,7 @@
             <picture>
               <source type="image/webp" srcset="img/card-3.webp 1x, img/card-3@2x.webp 2x">
     
-              <img src="img/card-3.png" width="440" height="266" srcset="img/card-3@2x.png 2x" alt="Серебрянный сервер">
+              <img src="img/card-3.png" width="440" height="270" srcset="img/card-3@2x.png 2x" alt="Серебрянный сервер">
             </picture>
           </div>
           <div class="product__text">
@@ -171,7 +332,7 @@
             <picture>
               <source type="image/webp" srcset="img/card-4.webp 1x, img/card-4@2x.webp 2x">
     
-              <img src="img/card-4.png" width="440" height="266" srcset="img/card-4@2x.png 2x" alt="Черные системы хранения с фиолетовыми сотами">
+              <img src="img/card-4.png" width="440" height="270" srcset="img/card-4@2x.png 2x" alt="Черные системы хранения с фиолетовыми сотами">
             </picture>
           </div>
           <div class="product__text">
@@ -184,7 +345,7 @@
             <picture>
               <source type="image/webp" srcset="img/card-5.webp 1x, img/card-5@2x.webp 2x">
     
-              <img src="img/card-5.png" width="440" height="266" srcset="img/card-5@2x.png 2x" alt="Запчасти">
+              <img src="img/card-5.png" width="440" height="270" srcset="img/card-5@2x.png 2x" alt="Запчасти">
             </picture>
           </div>
           <div class="product__text">
@@ -194,26 +355,28 @@
         </div>
       </div>
     </section>
-    <section class="benefits">
+    <section class="benefits bg-text">
       <div class="container">
-        <div class="benefits__img">
-          <picture>
-            <source type="image/webp" srcset="img/laptop.webp 1x, img/laptop@2x.webp 2x">
-  
-            <img src="img/laptop.png" width="873" height="492" srcset="img/laptop@2x.png 2x" alt="Открытый ноутбук">
-          </picture>
-        </div>
-        <div class="benefits__text">
-          <span class="title">Наши преимущества</span>
-          <p>Оптимизация мощностей (расходов, социальных выплат и&nbsp;т.п.) позволили компании на&nbsp;4,7% понизить цены по&nbsp;сравнению с&nbsp;конкурентами</p>
-          <button class="btn">
-            <span class="btn__img">
-              <svg width="12" height="12">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-            <span class="btn__text">Оставить заявку</span>
-          </button>
+        <div class="benefits__wrapper">
+          <div class="benefits__img">
+            <picture>
+              <source type="image/webp" srcset="img/laptop.webp 1x, img/laptop@2x.webp 2x">
+    
+              <img src="img/laptop.png" width="873" height="492" srcset="img/laptop@2x.png 2x" alt="Открытый ноутбук">
+            </picture>
+          </div>
+          <div class="benefits__text">
+            <span class="title">Наши преимущества</span>
+            <p>Оптимизация мощностей (расходов, социальных выплат&nbsp;и&nbsp;т.п.) позволили компании на&nbsp;4,7% понизить цены по&nbsp;сравнению с&nbsp;конкурентами</p>
+            <button class="btn">
+              <span class="btn__img">
+                <svg width="12" height="12">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="btn__text">Оставить заявку</span>
+            </button>
+          </div>
         </div>
         <div class="benefits__cards">
           <div class="benefit-card">
@@ -222,7 +385,7 @@
                 <use xlink:href="img/sprite.svg#card-pos"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--m">Самые выгодные и низкие цены</span>
+            <span class="title title--euclid title--s">Самые выгодные и&nbsp;низкие цены</span>
             <p>В&nbsp;наличии широкий ассортимент, а&nbsp;также доступные цены 
               на&nbsp;ноутбуки Dell</p>
           </div>
@@ -232,7 +395,7 @@
                 <use xlink:href="img/sprite.svg#check"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--m">Авторизованный сервисный центр DELL</span>
+            <span class="title title--euclid title--s">Авторизованный сервисный центр DELL</span>
             <p>Сертифицированный сервисный центр по&nbsp;ремонту техники Dell в&nbsp;России и&nbsp;странах СНГ</p>
           </div>
           <div class="benefit-card">
@@ -241,7 +404,7 @@
                 <use xlink:href="img/sprite.svg#people"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--m">Высокий уровень технической экспертизы</span>
+            <span class="title title--euclid title--s">Высокий уровень технической экспертизы</span>
             <p>Мы&nbsp;прошли аттестацию в&nbsp;виде тестирования, где показали высокий уровень знаний</p>
           </div>
           <div class="benefit-card">
@@ -250,7 +413,7 @@
                 <use xlink:href="img/sprite.svg#cube"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--m">Официальный партнер DELL</span>
+            <span class="title title--euclid title--s">Официальный партнер DELL</span>
             <p>Официальный поставщик продукции DELL&nbsp;в России 
               и&nbsp;странах СНГ</p>
           </div>
@@ -260,8 +423,10 @@
     <section class="news">
       <div class="container">
         <div class="news__text">
-          <span class="title">Последние новости</span>
-          <p>Вы&nbsp;можете посмотреть ещё больше интересных новостей и&nbsp;узнать о&nbsp;последних новинках, перейдя по&nbsp;кнопке</p>
+          <div class="news__text-wrapper">
+            <span class="title">Последние новости</span>
+            <p>Вы&nbsp;можете посмотреть ещё больше интересных новостей и&nbsp;узнать о&nbsp;последних новинках, перейдя по&nbsp;кнопке</p>
+          </div>
           <button class="btn">
             <span class="btn__text">Все новости</span>
             <span class="btn__img">
@@ -413,7 +578,7 @@
         </div>
       </div>
     </section>
-    <section class="contact-us">
+    <section class="contact-us bg-text">
       <div class="container">
         <div class="contacts">
           <span class="title">Наши контакты</span>
@@ -429,20 +594,24 @@
             </li>
             <li class="contacts__item contacts__item--phone">
               <span>Телефон</span>
-              <a class="title title--s" href="tel:+74957370601">+7 495 737-06-01</a>
-              <a class="title title--s" href="tel:+74957370601">+7 495 737-06-01</a>
+              <div class="contacts__tel">
+                <a class="title title--s" href="tel:+74957370601">+7 495 737-06-01</a>
+                <a class="title title--s" href="tel:+74957370601">+7 495 737-06-01</a>
+              </div>
             </li>
           </ul>
-          <a href="#">
-            <svg width="38" height="38">
-              <use xlink:href="img/sprite.svg#fb"></use>
-            </svg>
-          </a>
-          <a href="#">
-            <svg width="38" height="38">
-              <use xlink:href="img/sprite.svg#wa"></use>
-            </svg>
-          </a>
+          <div class="contacts__social">
+            <a class="contacts__social-link" href="#">
+              <svg width="38" height="38">
+                <use xlink:href="img/sprite.svg#fb"></use>
+              </svg>
+            </a>
+            <a class="contacts__social-link" href="#">
+              <svg width="38" height="38">
+                <use xlink:href="img/sprite.svg#wa"></use>
+              </svg>
+            </a>
+          </div>
         </div>
         <div class="contact-us__img">
           <picture>
@@ -478,12 +647,11 @@
               </span>
             </button>
           </form>
-
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer bg-text">
     <div class="container">
       <a class="footer__logo" href="index.html">
         <picture>
@@ -530,31 +698,36 @@
             <span class="title title--ss">Москва, ул. 3-я Хорошевская, дом 2, строение 1</span>
           </li>
           <li class="footer__contacts-item">
+            <span>Телефон</span>
+            <div class="footer__tel">
+              <a class="title title--ss" href="tel:+74957370601">+7 495 737-06-01,</a>
+              <a class="title title--ss" href="tel:+74957370601">+7 495 737-06-01</a>
+            </div>
+          </li>
+          <li class="footer__contacts-item">
             <span>Email</span>
             <a class="title title--ss" href="mailto:dell_ru@gmail.com">dell_ru@gmail.com</a>
           </li>
           <li class="footer__contacts-item">
-            <span>Телефон</span>
-            <a class="title title--ss" href="tel:+74957370601">+7 495 737-06-01,</a>
-            <a class="title title--ss" href="tel:+74957370601">+7 495 737-06-01</a>
-          </li>
-          <li class="footer__contacts-item">
-            <a href="#">
-              <svg width="38" height="38">
-                <use xlink:href="img/sprite.svg#fb"></use>
-              </svg>
-            </a>
-            <a href="#">
-              <svg width="38" height="38">
-                <use xlink:href="img/sprite.svg#wa"></use>
-              </svg>
-            </a>
+            <div class="footer__social">
+              <a href="#">
+                <svg width="38" height="38">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="38" height="38">
+                  <use xlink:href="img/sprite.svg#wa"></use>
+                </svg>
+              </a>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <script src=""></script>
+  <script src="js/vendor/swiper.js" type="module"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 </html>

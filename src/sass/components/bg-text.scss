@@ -1,0 +1,9 @@
+.bg-text {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+  }
+}

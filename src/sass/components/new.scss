@@ -12,7 +12,7 @@
     right: -25px;
     width: 50px;
     min-height: 97px;
-    padding: 24px 2px;
+    padding: 23px 2px;
     color: $color-bunker;
     font-size: 10px;
     text-align: center;
@@ -22,8 +22,19 @@
     background-color: $color-default-white;
 
     strong {
+      display: block;
+      margin-bottom: 5px;
       font-size: 20px;
       font-weight: 900;
+    }
+
+    @include vp-767 {
+      padding: 21px 2px;
+      font-size: 15px;
+
+      strong {
+        font-size: 18px;
+      }
     }
   }
 
@@ -70,14 +81,18 @@
 
     .btn {
       position: absolute;
-      top: 25px;
-      right: 25px;
+      top: 28px;
+      right: 38px;
+      
+      &__img {
+        width: 43px;
+        height: 43px;
+      }
     }
   }
 
   &__text {
-    min-height: 146px;
-    margin-top: -30px;
+    margin-top: -34px;
     padding: 0 30px;
     color: $color-bunker;
     font-size: 14px;
@@ -88,5 +103,7 @@
   .title {
     display: inline-block;
     max-width: 70%;
+    line-height: 1.25;
+    margin-bottom: 13px;
   }
 }

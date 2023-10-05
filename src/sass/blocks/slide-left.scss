@@ -1,0 +1,97 @@
+.slide-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 73px 5.47% 55px 0;
+  margin-left: calc((100% - 1400px)/2);
+
+  @include vp-1499 {
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+
+  @include vp-767 {
+    margin-left: 15px;
+  }
+
+  @include vp-767 {
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    margin-top: 8.4%;
+
+    span {
+      margin-bottom: 15px;
+    }
+
+    .title {
+      margin-bottom: 60px;
+    }
+  }
+
+  .scroll-to {
+    position: relative;
+    z-index: 2;
+    margin-right: 9.8%;
+    margin-top: 16.4%;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 2;
+    width: 557px;
+    height: 555px;
+    margin-left: -8px;
+    transform: scale(1.15);
+
+    @include vp-1919 {
+      width: 44.9vw;
+      height: 28.9vw;
+    }
+
+    @include vp-767 {
+      width: 327px;
+      height: 325px;
+      margin: 0;
+      transform: scale(1);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &.bg-text {
+    &::after {
+      left: 0;
+      top: 95px;
+      width: 39.9vw;
+      height: 10.47vw;
+      background: url("../img/dell.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center left;
+    }
+
+    @include vp-767 {
+      .bg-text::after {
+        top: 18px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

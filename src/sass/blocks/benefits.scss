@@ -1,10 +1,69 @@
 .benefits {
   width: 100%;
+  padding: 87px 0 46px;
   background-color: $color-white-smoke;
+  overflow: hidden;
+
+  &.bg-text {
+    &::after {
+      left: 0;
+      top: 152px;
+      width: 46.72vw;
+      height: 17.81vw;
+      background: url("../img/best-quality.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center left;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__text {
+    max-width: 520px;
+    margin-bottom: 32px;
+    margin-left: -5.8%;
+
+    .title {
+      margin-bottom: 33px;
+    }
+
+    p {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__img {
+    width: 874px;
+    height: 492px;
+    margin-left: -79px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 330px);
     gap: 26px;
+
+    @include vp-1919 {
+      justify-content: center;
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(auto-fill, minmax(100% ,330px));
+      gap: 15px;
+    }
   }
 }
