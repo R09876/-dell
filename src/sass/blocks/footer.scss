@@ -78,10 +78,10 @@
 
   &.bg-text {
     &::after {
-      right: 10px;
-      top: 133px;
-      width: 26.82vw;
-      height: 9vw;
+      right: -10px;
+      top: 128px;
+      width: 25vw;
+      height: 9.2vw;
       background: url("../img/dell-footer.svg");
       background-repeat: no-repeat;
       background-size: contain;
