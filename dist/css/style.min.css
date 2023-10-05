@@ -1667,10 +1667,6 @@ input:matches([type=email],
   position: relative;
 }
 
-.header__icon--no-mob {
-  display: none;
-}
-
 .header__icon svg {
   display: block;
   width: 24px;
@@ -2560,6 +2556,10 @@ input:matches([type=email],
   .header__icon {
     width: 46px;
     height: 46px;
+  }
+
+  .header__icon--no-mob {
+    display: none;
   }
 
   .burger {

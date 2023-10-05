@@ -88,7 +88,10 @@
     }
 
     &--no-mob {
-      display: none;
+
+      @include vp-767 {
+        display: none;
+      }
     }
 
     svg {
