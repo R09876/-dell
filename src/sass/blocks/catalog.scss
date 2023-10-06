@@ -13,11 +13,25 @@
       width: 85%;
       margin-bottom: 30px;
       line-height: 1;
+
+      @include vp-767 {
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
     }
 
     p {
       width: 85%;
       margin-bottom: 46px;
+
+      @include vp-767 {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @include vp-767 {
+      margin-bottom: 25px;
     }
   }
 
@@ -47,6 +61,12 @@
       top: 40px;
       font-size: 25px;
       font-weight: 100;
+
+      @include vp-767 {
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+      }
     }
 
     &:nth-child(2n) {

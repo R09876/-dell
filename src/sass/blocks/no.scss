@@ -1,0 +1,13 @@
+.no-mob {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.no-desc {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

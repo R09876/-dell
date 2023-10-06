@@ -24,15 +24,27 @@
 
   &--s {
     font-size: 22px;
+
+    @include vp-767 {
+      font-size: 18px;
+    }
   }
 
   &--ss {
     font-size: 18px;
+
+    @include vp-767 {
+      font-size: 15px;
+    }
   }
 
   &--euclid {
     font-family: $ff-euclid;
     font-weight: 700;
     line-height: 1.25;
+
+    @include vp-767 {
+      line-height: 1.3;
+    }
   }
 }

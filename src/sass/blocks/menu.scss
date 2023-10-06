@@ -1,15 +1,18 @@
 .menu {
   @include vp-767 {
-    display: none;
+    display: block;
     position: absolute;
-    z-index: 10;
-    width: 100vw;
-    min-height: 100vh;
+    z-index: 100;
+    width: 100%;
+    min-height: 0;
     top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(63, 63, 63, 0.50);
+    height: 0;
+    background-color: $color-transparent;
+    transition: background-color $trans-default;
+    transition-delay: 0.2s;
   }
 
   &__list {
@@ -18,8 +21,10 @@
       z-index: 100;
       flex-direction:column;
       width: 100%;
-      padding: 56px 38px;
+      padding: 41px 0 45px;
       background-color: $color-default-white;
+      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+      transition: clip-path $trans-default;
     }
   }
 }

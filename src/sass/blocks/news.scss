@@ -1,23 +1,34 @@
 .news {
   padding: 172px 0 175px;
 
+  @include vp-767 {
+    padding: 124px 0 117px;
+  }
+
   &__text {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 68px;
+
+    @include vp-767 {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
 
     .btn {
       height: max-content;
       margin-top: 7px;
       gap: 16px;
+
+      @include vp-767 {
+        flex-direction: row-reverse;
+      }
     }
 
-    @include vp-767 {
-      flex-direction: column;
-
-      .btn {
-        width: max-content;
-        flex-direction: row-reverse;
+    p {
+      @include vp-767 {
+        margin-bottom: 23px;
       }
     }
   }
@@ -27,6 +38,10 @@
 
     .title {
       margin-bottom: 25px;
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -43,7 +58,13 @@
     }
 
     @include vp-767 {
-      grid-template-columns: calc(100% - 11px);
+      grid-template-columns: calc(100% - 20px);
+      justify-content: flex-start;
+      gap: 20px;
+
+      .new:nth-child(n+4) {
+        display: none;
+      }
     }
   }
 }

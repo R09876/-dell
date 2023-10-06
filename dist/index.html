@@ -8,7 +8,9 @@
   <meta name="description" content="Магазин компьютерного оборудования Dell">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Light.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="icon" href="img/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -43,10 +45,10 @@
         </svg>
       </a>
       <div class="header__btns">
-        <span class="header__name">Мария</span>
+        <span class="header__name no-mob">Мария</span>
         <div class="header__icons">
           <div class="dropdown">
-            <button class="header__icon" aria-label="Нажмите для перехода в профиль">
+            <button class="header__icon" data-drop aria-label="Нажмите для перехода в профиль">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#profile"></use>
               </svg>
@@ -66,17 +68,16 @@
                   <li class="dropdown__item"><a class="dropdown__link" href="#">История заказов</a></li>
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Персональные предложения</a></li>
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Выйти</a></li>
-                  <li class="dropdown__item"><a class="dropdown__link" href="#">Контакты</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <a class="header__icon header__icon--no-mob" href="#" aria-label="Нажмите для перехода">
+          <a class="header__icon no-mob" href="#" aria-label="Нажмите для перехода">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#signal"></use>
             </svg>
           </a>
-          <a class="header__icon header__icon--no-mob" href="#" aria-label="Нажмите для перехода в избранное">
+          <a class="header__icon no-mob" href="#" aria-label="Нажмите для перехода в избранное">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#heart"></use>
             </svg>
@@ -234,7 +235,7 @@
                 </a>
                 <div class="slide-left__text">
                   <span>Новое поступление</span>
-                  <span class="title">Лучшие товары от&nbsp;компании DelL</span>
+                  <span class="title">Лучшие товары от&nbsp;компании Dell</span>
                   <a class="btn" href="#">
                     <span class="btn__img">
                       <svg width="12" height="12">
@@ -385,7 +386,8 @@
                 <use xlink:href="img/sprite.svg#card-pos"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--s">Самые выгодные и&nbsp;низкие цены</span>
+            <span class="title title--euclid title--s no-mob">Самые выгодные и&nbsp;низкие цены</span>
+            <span class="title title--euclid title--s benefif-card__title no-desc">У нас самые выгодные и&nbsp;низкие цены</span>
             <p>В&nbsp;наличии широкий ассортимент, а&nbsp;также доступные цены 
               на&nbsp;ноутбуки Dell</p>
           </div>
@@ -413,7 +415,8 @@
                 <use xlink:href="img/sprite.svg#cube"></use>
               </svg>
             </span>
-            <span class="title title--euclid title--s">Официальный партнер DELL</span>
+            <span class="title title--euclid title--s benefif-card__title no-mob">Официальный партнер DELL</span>
+            <span class="title title--euclid title--s benefif-card__title no-desc">Мы являемся официальным партнером DELL</span>
             <p>Официальный поставщик продукции DELL&nbsp;в России 
               и&nbsp;странах СНГ</p>
           </div>
@@ -438,7 +441,7 @@
         </div>
         <div class="news__cards">
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-1.webp 1x, img/new-1@2x.webp 2x">
@@ -461,7 +464,7 @@
             </div>
           </div>
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-2.webp 1x, img/new-2@2x.webp 2x">
@@ -484,7 +487,7 @@
             </div>
           </div>
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-3.webp 1x, img/new-3@2x.webp 2x">
@@ -507,7 +510,7 @@
             </div>
           </div>
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-4.webp 1x, img/new-4@2x.webp 2x">
@@ -530,7 +533,7 @@
             </div>
           </div>
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-5.webp 1x, img/new-5@2x.webp 2x">
@@ -553,7 +556,7 @@
             </div>
           </div>
           <div class="new">
-            <time class="new__date" datetime="2023-07-11"><strong>11</strong> июля</time>
+            <span class="new__date"><time datetime="2023-07-11"><strong>11</strong> июля</time></span>
             <div class="new__img">
               <picture>
                 <source type="image/webp" srcset="img/new-6.webp 1x, img/new-6@2x.webp 2x">
@@ -636,7 +639,7 @@
               <label for="comment">Комментарий</label>
               <textarea name="comment" id="comment"></textarea>
             </div>
-            <a class="btn" href="#">
+            <button class="btn" type="submit">
               <span class="btn__img">
                 <svg width="12" height="12">
                   <use xlink:href="img/sprite.svg#arrow"></use>
@@ -645,7 +648,7 @@
               <span class="btn__text">
                 Заказать
               </span>
-            </a>
+            </button>
           </form>
         </div>
       </div>
@@ -710,12 +713,12 @@
           </li>
           <li class="footer__contacts-item">
             <div class="footer__social">
-              <a href="#">
+              <a class="footer__social-link" href="#">
                 <svg width="38" height="38">
                   <use xlink:href="img/sprite.svg#fb"></use>
                 </svg>
               </a>
-              <a href="#">
+              <a class="footer__social-link" href="#">
                 <svg width="38" height="38">
                   <use xlink:href="img/sprite.svg#wa"></use>
                 </svg>

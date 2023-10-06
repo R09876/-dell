@@ -6,16 +6,17 @@
   margin-left: calc((100% - 1400px)/2);
 
   @include vp-1499 {
-    flex-wrap: wrap;
     margin-left: 50px;
+  }
+
+  @include vp-1023 {
+    flex-wrap: wrap;
   }
 
   @include vp-767 {
     margin-left: 15px;
-  }
-
-  @include vp-767 {
-    flex-wrap: wrap;
+    padding-top: 78px;
+    padding-bottom: 10px;
   }
 
   &__text {
@@ -33,6 +34,18 @@
 
     .title {
       margin-bottom: 60px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+
+      span {
+        margin-bottom: 6px;
+      }
+
+      .title {
+        margin-bottom: 27px;
+      }
     }
   }
 
@@ -61,9 +74,10 @@
     }
 
     @include vp-767 {
-      width: 327px;
-      height: 325px;
+      width: 97%;
+      height: auto;
       margin: 0;
+      margin-right: 4px;
       transform: scale(1);
     }
 
@@ -80,17 +94,13 @@
       top: 95px;
       width: 39.9vw;
       height: 10.47vw;
-      background: url("../img/dell.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center left;
-    }
+      background-image: url("../img/dell.svg");
 
-    @include vp-767 {
-      .bg-text::after {
+      @include vp-767 {
+        left: 15px;
         top: 18px;
         width: 100%;
-        height: auto;
+        height: 21vw;
       }
     }
   }

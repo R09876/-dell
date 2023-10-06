@@ -1,4 +1,13 @@
-const vp768 = window.matchMedia('(max-width: 768px)');
+const vpTouch = window.matchMedia('(pointer: coarse)');
+
+const toggleClass = (el) => {
+  el.classList.toggle('is-active');
+}
+
+const removeClass = (header, body) => {
+  header.classList.remove('is-active');
+  body.classList.remove('scroll-lock');
+}
 
 const unitBurgerToggle = () => {
   const header = document.querySelector('header');
@@ -10,9 +19,11 @@ const unitBurgerToggle = () => {
   const body = document.querySelector('body');
   const burger = header.querySelector('.burger');
   const menu = header.querySelector('.menu');
+  const dropdown = header.querySelector('.dropdown');
+  const dropBtn = dropdown.querySelector('[data-drop]');
 
   burger.addEventListener('click', () => {
-    header.classList.toggle('is-active');
+    toggleClass(header);
 
     if(header.classList.contains('is-active')) {
       body.classList.add('scroll-lock');
@@ -23,19 +34,13 @@ const unitBurgerToggle = () => {
 
   menu.addEventListener('click', (e) => {
     if(!e.target.closest('.menu__list') && header.classList.contains('is-active')) {
-      header.classList.remove('is-active');
-      body.classList.remove('scroll-lock');
+      removeClass(header, body);
     }
   });
 
-  if(vp768.matches) {
-    const links = header.querySelectorAll('.nav__link');
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        header.classList.remove('is-active');
-        body.classList.remove('scroll-lock');
-      });
+  if(vpTouch.matches) {
+    dropBtn.addEventListener('click', () => {
+      toggleClass(dropdown);
     });
   }
 };

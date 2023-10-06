@@ -25,14 +25,13 @@ $color-baltic-sea:                   #343a41;
 // ---------------------------------
 
 $ff-roboto:                     "Roboto", "Arial", sans-serif;
-$ff-euclid:                     "Euclid Circular A", "Arial", sans-serif;
-$ff-rubik:                      "RubikOne", "Arial", sans-serif;
+$ff-euclid:                     "EuclidCircularA", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
 
 $tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
+$trans-default:                     0.4s $tf-default;
 
 
 // Viewports
@@ -40,6 +39,7 @@ $trans-default:                     0.3s $tf-default;
 
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+$vp-1300:                           1300px;
 $vp-1500:                           1500px;
 $vp-1920:                           1920px;
 

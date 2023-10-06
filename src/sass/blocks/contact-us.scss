@@ -3,6 +3,10 @@
   padding-bottom: 180px;
   background: linear-gradient(180deg, $color-default-white 34%, $color-whisper 34%);
 
+  @include vp-767 {
+    padding-bottom: 0;
+  }
+
   .container {
     position: relative;
     z-index: 3;
@@ -28,7 +32,7 @@
     border-radius: 0px 20px 20px 0px;
 
     @include vp-767 {
-      border-radius: none;
+      border-radius: 0;
     }
   }
 
@@ -36,7 +40,7 @@
     border-radius: 20px 0px 0px 20px;
 
     @include vp-767 {
-      border-radius: none;
+      border-radius: 0;
     }
   }
 
@@ -52,6 +56,27 @@
       height: 30.79vw;
     }
 
+    @include vp-1499 {
+      top: 40%;
+      width: 17vw;
+      height: 34vw;
+    }
+
+    @include vp-1023 {
+      top: 76%;
+      width: 22vw;
+      height: 40vw;
+    }
+
+    @include vp-767 {
+      top: 35.1%;
+      left: 53%;
+      width: 34%;
+      height: auto;
+      max-width: 150px;
+      transform: rotate(13deg);
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -64,10 +89,11 @@
       bottom: 50px;
       width: 84vw;
       height: 22vw;
-      background: url("../img/our-contacts.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center left;
+      background-image: url("../img/our-contacts.svg");
+
+      @include vp-767 {
+        display: none;
+      }
     }
   }
 }
