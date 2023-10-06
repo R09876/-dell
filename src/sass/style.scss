@@ -7,9 +7,9 @@
 // Global
 // ---------------------------------
 
+@import "global/fonts";
 @import "global/variables";
 @import "global/mixins";
-@import "global/fonts";
 @import "global/global";
 @import "global/container";
 
@@ -45,3 +45,4 @@
 @import "blocks/contacts";
 @import "blocks/form";
 @import "blocks/footer";
+@import "blocks/no";

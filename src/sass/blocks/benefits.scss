@@ -4,17 +4,8 @@
   background-color: $color-white-smoke;
   overflow: hidden;
 
-  &.bg-text {
-    &::after {
-      left: 0;
-      top: 152px;
-      width: 46.72vw;
-      height: 17.81vw;
-      background: url("../img/best-quality.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center left;
-    }
+  @include vp-767 {
+    padding: 112px 0 117px;
   }
 
   &__wrapper {
@@ -23,7 +14,18 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     margin-bottom: 48px;
+
+    @include vp-1023 {
+      flex-wrap: wrap;
+    }
+
+    @include vp-767 {
+      flex-direction: column-reverse;
+      overflow: hidden;
+      margin-bottom: 39px;
+    }
   }
 
   &__text {
@@ -31,12 +33,30 @@
     margin-bottom: 32px;
     margin-left: -5.8%;
 
+    @include vp-1299 {
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+      margin: 0;
+    }
+
     .title {
       margin-bottom: 33px;
+
+      @include vp-767 {
+        margin-bottom: 27px;
+      }
     }
 
     p {
       margin-bottom: 41px;
+
+      @include vp-767 {
+        width: 96%;
+        margin-bottom: 31px;
+      }
     }
   }
 
@@ -44,6 +64,19 @@
     width: 874px;
     height: 492px;
     margin-left: -79px;
+
+    @include vp-1023 {
+      width: 50vw;
+      height: auto;
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      height: auto;
+      margin-top: -55px;
+      margin-right: -34.7%;
+    }
 
     img {
       width: 100%;
@@ -53,6 +86,8 @@
   }
 
   &__cards {
+    position: relative;
+    z-index: 3;
     display: grid;
     grid-template-columns: repeat(auto-fill, 330px);
     gap: 26px;
@@ -62,8 +97,25 @@
     }
 
     @include vp-767 {
-      grid-template-columns: repeat(auto-fill, minmax(100% ,330px));
-      gap: 15px;
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &.bg-text {
+    &::after {
+      left: 0;
+      top: 152px;
+      width: 46.72vw;
+      height: 17.81vw;
+      background-image: url("../img/best-quality.svg");
+
+      @include vp-767 {
+        top: 24.5%;
+        left: 15px;
+        width: 100%;
+        height: 33vw;
+      }
     }
   }
 }

@@ -28,12 +28,26 @@
       font-weight: 900;
     }
 
+    time {
+      @include vp-767 {
+        display: block;
+        width: 30px;
+        overflow: hidden;
+        line-height: 1.1;
+      }
+    }
+
     @include vp-767 {
-      padding: 21px 2px;
+      top: 53px;
+      padding: 20px 5px;
       font-size: 15px;
+      min-height: 38px;
+      width: max-content;
+      white-space: nowrap;
 
       strong {
         font-size: 18px;
+        margin-bottom: 0;
       }
     }
   }
@@ -44,6 +58,10 @@
     height: 219px;
     border-radius: 45px 0 0 0;
 
+    @include vp-767 {
+      height: 36.8vw;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -53,6 +71,12 @@
       border-radius: 45px 0 0 0;
       object-fit: cover;
       object-position: center;
+
+      @include vp-767 {
+        height: 57.34vw;
+        min-height: 185px;
+        max-height: 300px;
+      }
     }
   }
 
@@ -62,9 +86,9 @@
     min-height: 146px;
     width: calc(100% + 2px);
     padding: 60px 0 26px;
-    background: url(../img/mask.svg);
+    background-image: url(../img/mask.svg);
     background-repeat: no-repeat;
-    background-size: 415px 146px;
+    background-size: 416px 146px;
     background-position: top right;
     border-radius: 0 0 45px 0;
 
@@ -72,22 +96,47 @@
       content: "";
       position: absolute;
       z-index: -1;
-      width: calc(100% - 415px);
+      width: calc(100% - 413px);
       top: 0;
-      left: 0;
-      min-height: 146px;
+      left: -1px;
+      bottom: 0;
       background-color: $color-default-white;
+    }
+
+    @include vp-767 {
+      background-size: 345px 146px;
+      padding: 34px 0 20px;
+
+      &::before {
+        content: "";
+        width: calc(100% - 345px);
+        top: 12px;
+        left: 0;
+        border-top: 1px solid rgba($color-default-black, 0.3);
+      }
     }
 
     .btn {
       position: absolute;
-      top: 28px;
+      top: 26px;
       right: 38px;
+
+      @include vp-767 {
+        top: 20px;
+        right: 22px;
+      }
       
       &__img {
         width: 43px;
         height: 43px;
+
+        @include vp-767 {
+          width: 57px;
+          height: 57px;
+          border: 12px solid $color-default-white;
+        }
       }
+
     }
   }
 
@@ -98,12 +147,23 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
+
+    @include vp-767 {
+      margin: 0;
+      padding: 0 20px;
+    }
   }
 
   .title {
     display: inline-block;
     max-width: 70%;
-    line-height: 1.25;
     margin-bottom: 13px;
+    line-height: 1.25;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      font-size: 25px;
+      line-height: 1;
+    }
   }
 }

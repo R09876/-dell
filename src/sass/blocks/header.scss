@@ -12,6 +12,7 @@
     gap: 30px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
     @include vp-767 {
       flex-wrap: nowrap;
@@ -36,12 +37,6 @@
     }
   }
 
-  &__name {
-    @include vp-767 {
-      display: none;
-    }
-  }
-
   .nav {
     margin-right: 20px;
   }
@@ -54,6 +49,10 @@
     height: 20px;
     margin-right: auto;
     margin-left: 18px;
+
+    @include vp-767 {
+      margin-left: 21px;
+    }
 
     svg {
       display: block;
@@ -93,26 +92,24 @@
       position: relative;
     }
 
-    &--no-mob {
-
-      @include vp-767 {
-        display: none;
-      }
-    }
-
     svg {
       display: block;
       width: 24px;
       height: 24px;
-      object-fit: cover;
+      object-fit: contain;
     }
+  }
+
+  &__name {
+    font-size: 20px;
+    color: $color-default-black;
   }
 
   &__btns {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    gap: 23px;
   }
 
   &__num {
@@ -131,10 +128,15 @@
     border-radius: 50%;
     background-color: $color-blue;
 
+    @include vp-767 {
+      bottom: 31px;
+      left: 31px;
+    }
+
     span {
       font-size: 12px;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1;
       text-align: center;
       color: $color-default-white;
     }
@@ -142,7 +144,13 @@
 
   &.is-active {
     .menu {
-      display: block;
+      height: auto;
+      min-height: 100vh;
+      background-color: rgba(63, 63, 63, 0.50);
+
+      &__list {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+      }
     }
 
     .burger {

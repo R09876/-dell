@@ -3,14 +3,17 @@
   display: flex;
   position: relative;
   min-width: 509px;
-  min-height: 600px;
+  min-height: 400px;
   background-color: $color-snow;
   overflow: hidden;
 
   @include vp-767 {
     flex-direction: row-reverse;
+    align-items: center;
     min-width: 100%;
     min-height: 196px;
+    height: 52.27vw;
+    padding-right: calc(100% - 170px);
   }
 
   .title {
@@ -20,7 +23,10 @@
     padding-top: 52px;
 
     @include vp-767 {
-      margin: 0;
+      max-width: 140px;
+      height: max-content;
+      margin: 3px 15px 0;
+      padding-top: 0;
     }
   }
 
@@ -37,10 +43,13 @@
     opacity: 0.15;
 
     @include vp-767 {
-      position: relative;
-      top: 0;
-      width: 252px;
+      top: -30px;
+      left: auto;
+      right: 5px;
+      width: 67%;
+      height: auto;
       min-height: 166px;
+      opacity: 0.35;
     }
   
     img {
